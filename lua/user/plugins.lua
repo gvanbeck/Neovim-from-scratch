@@ -59,6 +59,15 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
 
+  -- phpactor
+  use {
+      "phpactor/phpactor",
+      config = function()
+        vim.g['phpactorInputListStrategy'] = 'phpactor#input#list#fzf'
+        vim.g['phpactorQuickfixStrategy'] = 'phpactor#quickfix#fzf'
+      end
+    }
+
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
