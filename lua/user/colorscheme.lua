@@ -1,12 +1,3 @@
--- vim.cmd [[
--- try
---   colorscheme darkplus
--- catch /^Vim\%((\a\+)\)\=:E185/
---   colorscheme default
---   set background=dark
--- endtry
--- ]]
-
 local colorscheme = "darkplus"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
