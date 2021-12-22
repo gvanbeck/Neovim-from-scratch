@@ -28,5 +28,8 @@ lsp_installer.on_server_ready(function(server)
 	server:setup(opts)
 end)
 
-local phpactor_opts = require("user.lsp.settings.phpactor")
-require"lspconfig".phpactor.setup(vim.tbl_deep_extend("force", phpactor_opts, opts))
+-- local phpactor_opts = require("user.lsp.settings.phpactor")
+-- require"lspconfig".phpactor.setup(vim.tbl_deep_extend("force", phpactor_opts, opts))
+
+local intelephens_opts = require("user.lsp.settings.intelephense")
+require"lspconfig".intelephense.setup(vim.tbl_deep_extend("force", intelephens_opts, opts))
