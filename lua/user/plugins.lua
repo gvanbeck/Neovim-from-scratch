@@ -58,8 +58,15 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
+  use "skywind3000/asynctasks.vim"
+  use {
+        'skywind3000/asyncrun.vim',
+        config = function()
+            vim.g['asyncrun_open'] = 6
+        end
+    }
 
-  -- phpactor
+  -- php
   use {
       "phpactor/phpactor",
       config = function()
@@ -67,6 +74,10 @@ return packer.startup(function(use)
         vim.g['phpactorQuickfixStrategy'] = 'phpactor#quickfix#fzf'
       end
     }
+  use "stephpy/vim-php-cs-fixer"
+
+
+ 
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
